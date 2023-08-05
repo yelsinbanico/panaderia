@@ -99,6 +99,16 @@ h6 {
      box-sizing: border-box;
 }
 
+.logo img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    object-fit: cover;
+}
+
+
 h1 a,
 h2 a,
 h3 a,
