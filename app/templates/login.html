@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Login | BAÑICO'S</title>
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css')}}">
 </head>
 <body>
 
     <div class="login-box"> 
-        <img class ="avatar" src="images/logo_bañico.png" alt="logo panaderia BAÑICO'S">
+        <img class ="avatar" src="{{ url_for('static', filename='images/logo_bañico.png')}}" alt="logo panaderia BAÑICO'S">
         <h1>Acceda aqui</h1>
-        <form >
+        <form method="POST" action="{{ url_for('login') }}">
             <!--username-->
             <label for="Nombre de usuario">Nombre de Usuario</label>
-            <input type="text" placeholder="Ingrese el nombre de usuario">
+            <input type="text" name="username" placeholder="Ingrese el nombre de usuario">
             <!--password-->
             <label for="Contraseña">Contraseña</label>
-            <input type="text" placeholder="Introdusca la Contraseña">
+            <input type="password" name="password" placeholder="Introdusca la Contraseña">
 
             <input type="submit" value="Iniciar Sesion">
 
             <a href="#">Olvidaste tu contraseña</a>
-            <a href="#">No tienes cuenta? Registrate</a>
+            <a href="{{ url_for('register') }}">No tienes cuenta? Registrate</a>
         </form>
 
 

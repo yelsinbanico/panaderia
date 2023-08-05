@@ -99,6 +99,16 @@ h6 {
      box-sizing: border-box;
 }
 
+.logo img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    object-fit: cover;
+}
+
+
 h1 a,
 h2 a,
 h3 a,
@@ -139,7 +149,7 @@ a {
 .layout_padding {
     padding-bottom: 0px;
     padding-top: 90px;
-}}
+}
 
 
 .header_main{ width: 100%; float: left; }
@@ -612,4 +622,23 @@ button.main_bt a:hover { color: #fa3e19; }
 
 .product_section_2 .images:hover {
     border-color: #fa3e19;
+}
+
+.login-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.login-button a {
+    padding: 10px;
+    background-color: #f8f9fa;
+    color: #343a40;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login-button a:hover {
+    background-color: #343a40;
+    color: #f8f9fa;
 }
