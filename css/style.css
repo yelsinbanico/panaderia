@@ -97,7 +97,12 @@ h6 {
      -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
      box-sizing: border-box;
+     
 }
+.logo .avatar {
+    border-radius: 50%;
+}
+
 
 h1 a,
 h2 a,
