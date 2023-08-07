@@ -24,10 +24,10 @@ body {
    
     width: 150px;
     height: 150px;
-    border-radius: 100%;
-    position: absolute;
-    
-    top: -50px;
+    border-radius: 50%;
+    position: absolute;    
+    top: -90px;
+    right: 85px;
     left: calc(50% -50px);
 
 }
