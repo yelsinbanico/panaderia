@@ -2,8 +2,10 @@
 
 {% block body %}
 <div class="container">
-    <h2>{{ product.name }}</h2>
-    <p>{{ product.description }}</p>
-    <p>Price: ${{ product.price }}</p>
+    {% for product in products %}
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <p>Price: ${{ product.price }}</p>
+    {% endfor %}
 </div>
 {% endblock %}
