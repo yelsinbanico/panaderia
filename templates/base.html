@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% block head %}
+    <!-- Aquí irán las metaetiquetas, estilos, etc. -->
+    <!-- basic -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>PANADERIA BAÑICO'S</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+     <!-- bootstrap css -->
+     <link
+     rel="stylesheet"
+     type="text/css"
+     href="{{ url_for('static', filename='css/bootstrap.min.css')}}"
+   />
+   <!-- style css -->
+   <link
+     rel="stylesheet"
+     type="text/css"
+     href="{{ url_for('static', filename='css/style.css') }}"
+   />
+   <!-- Responsive-->
+   <link
+     rel="stylesheet"
+     href="{{ url_for('static', filename='css/responsive.css') }}"
+   />
+   <!-- fevicon -->
+   <link
+     rel="icon"
+     href="{{ url_for('static', filename='images/fevicon.png') }}"
+     type="image/gif"
+   />
+   <!-- Scrollbar Custom CSS -->
+   <link
+     rel="stylesheet"
+     href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css') }}"
+   />
+   <!-- Tweaks for older IEs-->
+   <link
+     rel="stylesheet"
+     href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+   />
+   <!-- owl stylesheets -->
+   <link
+     rel="stylesheet"
+     href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"
+   />
+   <link
+     rel="stylesheet"
+     href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}"
+   />
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+     media="screen"
+   />
+    <link rel="stylesheet" href="{{ url_for('static', filename='master.css') }}">
+    {% endblock %}
+</head>
+<body>
+
+    <nav>
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('add_product') }}">Agregar Producto</a>
+        <a href="{{ url_for('products') }}">Ver Productos</a>
+    </nav>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    {% block body %}
+    <!-- Aquí irá el contenido principal de la página -->
+    {% endblock %}
+
+    {% block scripts %}
+    <!-- Aquí irán los scripts JS al final del documento -->
+    {% endblock %}
+
+</body>
+</html>

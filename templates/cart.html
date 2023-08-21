@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Carrito de Compras</title>
+    <!-- Aquí puedes agregar estilos específicos para la página del carrito si lo deseas -->
+{% endblock %}
+
+{% block body %}
+<h2>Carrito de Compras</h2>
+
+<section class="cart-items">
+    <!-- Aquí se mostrará una lista/tabla de los productos en el carrito con opciones para modificar la cantidad o eliminar -->
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Precio Total</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td><input type="number" value="{{ item.quantity }}"></td>
+                <td>${{ item.product.price }}</td>
+                <td>${{ item.product.price * item.quantity }}</td>
+                <td><button>Eliminar</button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<section class="cart-summary">
+    <p><strong>Total:</strong> ${{ cart_total }}</p>
+    <button>Proceder al Pago</button>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+    <!-- Aquí puedes agregar scripts específicos para la página del carrito si lo deseas -->
+{% endblock %}

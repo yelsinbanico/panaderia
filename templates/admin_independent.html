@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador | BAÑICO'S</title>
+    <link href="{{ url_for('static', filename='css/master.css') }}" rel="stylesheet">
+    <style>
+        /* Estilos específicos para la página de administrador */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            background-color: #f4f4f4;
+        }
+        section {
+            margin-bottom: 2em;
+            padding: 1em;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input {
+            margin-bottom: 1em;
+        }
+        .admin-box {
+            text-align: center;
+        }
+        .avatar {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="admin-box">
+    <img alt="logo panaderia BAÑICO'S" class="avatar" src="{{ url_for('static', filename='images/logo_bañico.png') }}">
+    <h2>Panel de Administrador</h2>
+    <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+</div>
+
+<section>
+    <h3>Lista de Productos</h3>
+    <ul>
+        {% for product in products %}
+            <li>
+                ID: {{ product.id }} - {{ product.name }}
+                <a href="{{ url_for('product', product_id=product.id) }}">Ver Detalles</a>
+                <a href="{{ url_for('update_product', product_id=product.id) }}">Editar</a>
+                <form action="{{ url_for('delete_product', product_id=product.id) }}" method="post" style="display: inline;">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section>
+    <h3>Añadir Nuevo Producto</h3>
+    <form>
+        <!-- Aquí irá el formulario para añadir un nuevo producto -->
+        <label for="product-name">Nombre del Producto:</label>
+        <input type="text" id="product-name" name="product-name" required>
+        <label for="product-price">Precio:</label>
+        <input type="number" id="product-price" name="product-price" required>
+        <label for="product-description">Descripción:</label>
+        <textarea id="product-description" name="product-description"></textarea>
+        <input type="submit" value="Añadir Producto">
+    </form>
+</section>
+
+<script>
+    // Aquí puedes agregar scripts específicos para la página de administrador si lo deseas
+</script>
+</body>
+</html>
