@@ -28,7 +28,7 @@ def index():
 @login_required
 def admin():
     products = Product.query.all()
-    return render_template('admin_independent.html')
+    return render_template('admin_independent.html', products=products)
 
 @app.route('/add_product', methods=['GET', 'POST'])
 def add_product():
@@ -86,14 +86,12 @@ def product(product_id):
 
 @app.route('/products')
 def products():
-    all_products = Product.query.all()
-    return render_template('product.html', products=all_products)
-
+    products = Product.query.all()
+    return render_template('product.html', products=products)
 
 @app.route('/cart')
 def cart():
     return render_template('cart.html')
-
 
 
 class User(db.Model, UserMixin):
@@ -125,6 +123,13 @@ def login():
         else:
             flash('Usuario o contraseña incorrectos.', 'error')
     return render_template('login_final.html')
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    flash('Has cerrado sesión con éxito.', 'success')
+    return redirect(url_for('index'))
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
