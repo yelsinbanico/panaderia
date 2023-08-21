@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 SECRET_REGISTRATION_KEY = "777"  # Puedes cambiar esto por la clave que desees.
 
@@ -27,8 +27,9 @@ def index():
 @app.route('/admin')
 @login_required
 def admin():
+    username = current_user.username  # Obtiene el nombre de usuario del usuario actualmente logueado
     products = Product.query.all()
-    return render_template('admin_independent.html', products=products)
+    return render_template('admin_independent.html', username=username, products=products)
 
 @app.route('/add_product', methods=['GET', 'POST'])
 def add_product():

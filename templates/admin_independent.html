@@ -65,6 +65,7 @@
         src="{{ url_for('static', filename='images/logo_bañico.png') }}"
       />
       <h2>Panel de Administrador</h2>
+      <p>Bienvenido, {{ username }}</p>  <!-- Muestra el nombre de usuario aquí -->
       <a href="{{ url_for('logout') }}">Cerrar sesión</a>
     </div>
 
