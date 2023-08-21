@@ -165,3 +165,14 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.flash-messages {
+    background-color: #f4f4f4; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde */
+    padding: 10px; /* Espaciado interior */
+    margin: 10px 0; /* Margen exterior */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #333; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+  }
+  
