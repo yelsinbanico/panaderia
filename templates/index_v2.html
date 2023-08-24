@@ -1,0 +1,671 @@
+{% extends 'base.html' %} 
+
+{% block body %}
+
+
+<header>
+  <div class="layout_padding banner_section_start">
+    <!-- header inner -->
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+            <div class="full">
+              <div class="center-desk">
+                <div class="logo">
+                  <a href="#home"
+                    ><img
+                      class="avatar"
+                      src="{{ url_for('static', filename='images/logo_bañico.png') }}"
+                      style="max-width: 100%"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+            <div class="menu-area">
+              <div class="limit-box">
+                <nav class="main-menu">
+                  <ul class="menu-area-main">
+                    <li class="active"><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Acerca de nosotros</a></li>
+                    <li><a href="#products">Productos y Servicios</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#contact">Contactanos </a></li>
+                    <button onclick="location.href='{{ url_for('login') }}';">Login</button>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end header inner -->
+    <!-- banner start-->
+    <div class="layout_padding banner_section">
+      <div class="container">
+        <div class="carousel slide" data-ride="carousel" id="main_slider">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-6 taital">
+                  <h1 class="taital">
+                    Calidad<strong class="banner_taital"
+                      >BAÑICO'S Productos con panes dulces</strong
+                    >
+                  </h1>
+                  <p class="lorem_text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="banner-image">
+                    <img
+                      src="{{ url_for('static', filename='images/banner-image.png') }}"
+                      style="max-width: 100%"
+                    />
+                  </div>
+                </div>
+                <div class="banner_bt">
+                  <button class="bt_main"><a href="#">Leer mas</a></button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6 taital">
+                  <h1>
+                    Quality<strong class="banner_taital"
+                      >BAÑICO'S Productos con panes dulces</strong
+                    >
+                  </h1>
+                  <p class="lorem_text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="banner-image">
+                    <img
+                      src="{{ url_for('static', filename='images/banner-image.png') }}"
+                      style="max-width: 100%"
+                    />
+                  </div>
+                </div>
+                <div class="banner_bt">
+                  <button class="bt_main"><a href="#">leer mas</a></button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6 taital">
+                  <h1>
+                    Quality<strong class="banner_taital"
+                      >BAÑICO'S Productos con panes dulces</strong
+                    >
+                  </h1>
+                  <p class="lorem_text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="banner-image">
+                    <img
+                      src="{{ url_for('static', filename='images/banner-image.png') }}"
+                      style="max-width: 100%"
+                    />
+                  </div>
+                </div>
+                <div class="banner_bt">
+                  <button class="bt_main"><a href="#">Leer mas</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            data-slide="prev"
+            href="#main_slider"
+            role="button"
+          >
+            <span aria-hidden="true" class="carousel-control-prev-icon"
+              ><i class="fa fa-angle-left"></i
+            ></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            data-slide="next"
+            href="#main_slider"
+            role="button"
+          >
+            <span aria-hidden="true" class="carousel-control-next-icon"
+              ><i class="fa fa-angle-right"></i
+            ></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- banner end-->
+<!-- about start-->
+<div class="layout_padding about_section" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <img
+            src="{{ url_for('static', filename='images/cupcake-img.png') }}"
+            style="max-width: 100%"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h1 class="about_text">
+          <strong
+            >Acerca de BAÑICO'S <span class="color">Panaderia</span></strong
+          >
+        </h1>
+        <p class="about_taital">
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim ve niam, quis nostrud
+          exercitationconsectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation
+        </p>
+        <button class="read_more"><a href="#">Leer mas</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- product start-->
+<div class="layout_padding product_section" id="products">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="product_text">
+          <strong><span class="den">BAÑICO'S</span>Productos</strong>
+        </h1>
+      </div>
+    </div>
+    <div class="product_section_2 images">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="images">
+            <img
+              src="{{ url_for('static', filename='images/bisco_huamanguino.png') }}"
+              style="max-width: 100%; width: 100%"
+            />
+          </div>
+          <h2 class="den_text croissants">
+            <a href="#">Biscochuelo Huamanguino</a>
+          </h2>
+        </div>
+        <div class="col-sm-4">
+          <div class="images">
+            <img
+              src="{{ url_for('static', filename='images/bisco_tradi.png') }}"
+              style="max-width: 100%; width: 100%"
+            />
+          </div>
+          <h2 class="den_text"><a href="#">Biscichuelo Tradicioanl</a></h2>
+        </div>
+        <div class="col-sm-4">
+          <div class="images">
+            <img
+              src="{{ url_for('static', filename='images/biscochuelo_tipo keke.png') }}"
+              style="max-width: 100%; width: 100%"
+            />
+          </div>
+          <h2 class="den_text"><a href="#">Biscochuelo tipo Queque</a></h2>
+        </div>
+        <div class="col-sm-4">
+          <div class="images">
+            <img
+              src="{{ url_for('static', filename='images/about-img4.png') }}"
+              style="max-width: 100%; width: 100%"
+            />
+          </div>
+          <h2 class="den_text"><a href="#">Cup Cake</a></h2>
+        </div>
+        <div class="col-sm-4">
+          <div class="images">
+            <img
+              src="{{ url_for('static', filename='images/about-img5.png') }}"
+              style="max-width: 100%; width: 100%"
+            />
+          </div>
+          <h2 class="den_text"><a href="#">Donut</a></h2>
+        </div>
+        <div class="col-sm-4">
+          <div class="images">
+            <img
+              src="{{ url_for('static', filename='images/about-img6.png') }}"
+              style="max-width: 100%; width: 100%"
+            />
+          </div>
+          <h2 class="den_text"><a href="#">Chocolate Cup Cake</a></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- product end-->
+<!-- Gallery start-->
+<div class="layout_padding2 gallery_section" id="gallery">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="gallery_main">
+          <h1 class="gallery_taital">
+            <strong
+              ><span class="our_text">Nuestra</span> Galeria de
+              Productos</strong
+            >
+          </h1>
+        </div>
+      </div>
+      <div class="col-sm-12 gallery_maain">
+        <div class="row">
+          <div class="col-sm-3 padding_0">
+            <div class="gallery_blog">
+              <img
+                class="img-responive"
+                src="{{ url_for('static', filename='images/gallery-img1.png') }}"
+              />
+              <div class="overlay">
+                <h2>Breakfast Breads</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 padding_0">
+            <div class="gallery_blog">
+              <img
+                class="img-responive"
+                src="{{ url_for('static', filename='images/gallery-img2.png') }}"
+              />
+              <div class="overlay">
+                <h2>Breakfast Breads</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 padding_0">
+            <div class="gallery_blog">
+              <img
+                class="img-responive"
+                src="{{ url_for('static', filename='images/gallery-img3.png') }}"
+              />
+              <div class="overlay">
+                <h2>Breakfast Breads</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 padding_0">
+            <div class="gallery_blog">
+              <img
+                class="img-responive"
+                src="{{ url_for('static', filename='images/gallery-img4.png') }}"
+              />
+              <div class="overlay">
+                <h2>Breakfast Breads</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Gallery-->
+<!-- Touch start-->
+<div class="layout_padding gallery_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="gallery_main">
+          <h1 class="gallery_taital">
+            <strong><span class="our_text">Ponerse en</span>Contacto</strong>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="touch_main">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input_main">
+            <div class="container">
+              <form action="/action_page.php">
+                <div class="form-group">
+                  <input
+                    class="email-bt"
+                    name="Name"
+                    placeholder="Su Nombre"
+                    type="text"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    class="email-bt"
+                    name="Email"
+                    placeholder="Correo Electronico"
+                    type="text"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    class="email-bt"
+                    name="Email"
+                    placeholder="Numero de Telefono"
+                    type="text"
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="massage-bt"
+                    id="comment"
+                    name="text"
+                    placeholder="Mensaje"
+                    rows="5"
+                  ></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="send_btn">
+            <button class="main_bt" type="button">
+              <a href="#">ENVIAR</a>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="images">
+            <img
+              src="{{ url_for('static', filename='images/bread-img.png') }}"
+              style="max-width: 100%"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="map_section">
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+<!-- Touch end-->
+<!-- contact start-->
+<div class="contact_section" id="contact">
+  <div class="container">
+    <div class="contact-taital">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="contact_text"><strong>Contactenos</strong></h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <h2 class="adderess_text">Direccion</h2>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/map-icon.png') }}"
+          /><span class="email_text"
+            >Asoc. Los Olivos, Jr. Las Dalias MZ O LT 17 - San Juan Bautista
+            05001 Ayacucho, Perú
+          </span>
+        </div>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/phone-icon.png') }}"
+          /><span class="email_text">925 394 202</span>
+        </div>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/email-icon.png') }}"
+          /><span class="email_text">banicospan@gmail.com</span>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <h2 class="adderess_text">Enlaces Utiles</h2>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/bulit-icon.png') }}"
+          /><span class="email_text">Bacerim Dictionary</span>
+        </div>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/bulit-icon.png') }}"
+          /><span class="email_text">Help Links</span>
+        </div>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/bulit-icon.png') }}"
+          /><span class="email_text">bacerim Attitudes</span>
+        </div>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/bulit-icon.png') }}"
+          /><span class="email_text">Call a Cutumer</span>
+        </div>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/bulit-icon.png') }}"
+          /><span class="email_text">Help a Bacerim</span>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <h2 class="adderess_text">Descripcion general</h2>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/bulit-icon.png') }}"
+          /><span class="email_text">Bacerim Dictionary</span>
+        </div>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/bulit-icon.png') }}"
+          /><span class="email_text">Help Links</span>
+        </div>
+        <div class="image-icon">
+          <img
+            src="{{ url_for('static', filename='images/bulit-icon.png') }}"
+          /><span class="email_text">bacerim Attitudes</span>
+        </div>
+        <div class="social_icon">
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="{{ url_for('static', filename='images/fb-icon.png') }}"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="{{ url_for('static', filename='images/twitter-icon.png') }}"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="{{ url_for('static', filename='images/google-icon.png') }}"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="{{ url_for('static', filename='images/linkedin-icon.png') }}"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <h2 class="adderess_text">Instagram</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="footer-img">
+              <img
+                src="{{ url_for('static', filename='images/footer-img1.png') }}"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-img">
+              <img
+                src="{{ url_for('static', filename='images/footer-img2.png') }}"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="footer-img">
+              <img
+                src="{{ url_for('static', filename='images/footer-img2.png') }}"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-img">
+              <img
+                src="{{ url_for('static', filename='images/footer-img3.png') }}"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- contact end-->
+<!-- copyright start-->
+<div class="copyright_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="copyright_taital">2023 Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- copyright end-->
+
+{% endblock %}
+
+{% block scripts %}
+
+<!-- Javascript files-->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery-3.0.0.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/plugin.js') }}"></script>
+<!-- sidebar -->
+<script src="{{ url_for('static', filename='js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+<!-- javascript -->
+<script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".fancybox").fancybox({
+      openEffect: "none",
+      closeEffect: "none",
+    });
+
+    $(".zoom").hover(
+      function () {
+        $(this).addClass("transition");
+      },
+      function () {
+        $(this).removeClass("transition");
+      }
+    );
+  });
+</script>
+<script>
+  // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+  // Australia.
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 11,
+      center: { lat: 40.645037, lng: -73.880224 },
+    });
+
+    var image = "images/location_point.png";
+    var beachMarker = new google.maps.Marker({
+      position: { lat: 40.645037, lng: -73.880224 },
+      map: map,
+      icon: image,
+    });
+  }
+</script>
+<!-- google map js -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&amp;callback=initMap"></script>
+
+<!-- end google map js -->
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery-3.0.0.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/plugin.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+<script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".fancybox").fancybox({
+      openEffect: "none",
+      closeEffect: "none",
+    });
+
+    $(".zoom").hover(
+      function () {
+        $(this).addClass("transition");
+      },
+      function () {
+        $(this).removeClass("transition");
+      }
+    );
+  });
+</script>
+<script>
+  // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+  // Australia.
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 11,
+      center: { lat: 40.645037, lng: -73.880224 },
+    });
+
+    var image = "images/location_point.png";
+    var beachMarker = new google.maps.Marker({
+      position: { lat: 40.645037, lng: -73.880224 },
+      map: map,
+      icon: image,
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&amp;callback=initMap"></script>
+
+{% endblock %}

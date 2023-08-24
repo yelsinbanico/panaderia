@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {% block head %}
+    <!-- Aquí irán las metaetiquetas, estilos, etc. -->
+    <!-- basic -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>Panaderia Bañico's</title>
+    <!-- Icono del sitio -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/favicon-banico.png') }}"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css"
+    />
+    <!-- Fuente Oswald de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Hoja de estilo personalizada -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+
+    {% endblock %}
+  </head>
+  <body>
+    <nav>
+      <button onclick="location.href='{{ url_for('login') }}';">Login</button>
+    </nav>
+
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <div class="flash-messages">
+      {% for message in messages %}
+      <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+
+    <div class="menu-btn">
+      <i class="fas fa-bars fa-2x"></i>
+    </div>
+    <div class="container">
+      <nav class="nav-main">
+        <!-- Logo -->
+        <img
+          src="{{ url_for('static', filename='img/favicon-pana.png') }}"
+          alt="Panaderia Bañico's logo"
+          class="nav-brand"
+        />
+
+        <!-- Menú de navegación -->
+        <ul class="nav-menu">
+          <li>
+            <a href="{{ url_for('index') }}">INICIO</a>
+          </li>
+          <li>
+            <a href="{{ url_for('about_us') }}">ACERCA DE NOSOTROS</a>
+          </li>
+          <li>
+            <a href="{{ url_for('products') }}">PRODUCTOS</a>
+          </li>
+          <li>
+            <a href="{{ url_for('online_orders') }}">PEDIDOS ONLINE</a>
+          </li>
+          <li>
+            <a href="{{ url_for('contact_us') }}">CONTÁCTANOS</a>
+          </li>
+        </ul>
+
+        <!-- Botón de inicio de sesión -->
+        <div class="login">
+          <a href="{{ url_for('login') }}" class="boton">Iniciar Sesión</a>
+        </div>
+
+        <!-- Navegación derecha -->
+        <ul class="nav-menu-right">
+          <li>
+            <a href="#">
+              <i class="fas fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {% block body %}
+      <!-- Aquí irá el contenido principal de la página -->
+      {% endblock %}
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-container">
+        <ul>
+          <li>
+            <a href="#">
+              <h3>Titulo uno</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">
+              <h3>Titulo uno</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">
+              <h3>Titulo uno</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">
+              <h3>Titulo uno</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+          <li>
+            <a href="#">Cadena de Bloques</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer class="footer">
+      <h3>2023 Todos los derechos reservados</h3>
+    </footer>
+
+    {% block scripts %}
+    <!-- Aquí irán los scripts JS al final del documento -->
+    <!-- Librería de terceros -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Archivo JavaScript personalizado -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/90f45d6330.js"
+      crossorigin="anonymous"
+    ></script>
+
+    {% endblock %}
+  </body>
+</html>
